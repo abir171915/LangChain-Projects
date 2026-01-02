@@ -12,13 +12,13 @@ import streamlit as st
 if "memory" not in st.session_state:
     st.session_state.memory = ConversationBufferMemory(memory_key="history")
 
-#streamlit framework
+#2. streamlit framework
 
 st.title('Football Player Search Result')
 input_text = st.text_input("Search the topic you want")
 
 
-# Prompt Templates
+#3. Prompt Templates
 
 name_prompt = PromptTemplate(
     input_variables = ["history","name"],
@@ -37,11 +37,11 @@ memorable_prompt = PromptTemplate(
 
 
 
-##OPENAI LLMS
+#4. OPENAI LLMS
 llm = OpenAI(openai_api_key=constants.openai_key, temperature=0.8)
 
 chain = (
-    
+    # Everytime I am searching something, first I am checking is there anything in my memory
     {
         "person": (lambda x: name_prompt.format(history=st.session_state.get("memory").buffer if st.session_state.get("memory") else "",
                                                  name = x["name"]))
@@ -61,7 +61,7 @@ chain = (
 if input_text:
     response = chain.invoke({"name": input_text})
 
-    ## Saving the interaction to the memory for NEXT run
+    #5. Saving the interaction to the memory for NEXT run
     st.session_state.memory.save_context({"input": input_text}, {"output": response})
 
     st.write(response)
