@@ -1,0 +1,1 @@
+openai_key = "PASTE YOUR KEY"
