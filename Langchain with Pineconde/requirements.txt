@@ -1,0 +1,11 @@
+langchain
+openai
+langchain-huggingface
+python-dotenv
+streamlit
+unstructured
+tiktoken 
+pinecone-client
+pypdf
+numpy
+pandas
