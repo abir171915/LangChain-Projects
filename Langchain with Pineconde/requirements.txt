@@ -9,3 +9,7 @@ pinecone-client
 pypdf
 numpy
 pandas
+langchain_community
+langchain_text_splitters
+langchain_openai
+langchain_pinecone
