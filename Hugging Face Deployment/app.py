@@ -1,9 +1,9 @@
 # Q&A ChatBot
-import constants
-from constants import openai_key
 from langchain_openai import ChatOpenAI
 import streamlit as st
-
+from dotenv import load_dotenv
+import os
+openai_key = os.getenv("OPENAI_API_KEY")
 
 ## Function load OpenAI model and get the responses
 
