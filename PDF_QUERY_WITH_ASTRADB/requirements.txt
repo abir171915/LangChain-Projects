@@ -8,3 +8,4 @@ tiktoken
 langchain-community 
 cassandra-driver 
 PyPDF2
+python-dotenv
