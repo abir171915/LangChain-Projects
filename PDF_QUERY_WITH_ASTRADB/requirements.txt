@@ -1,0 +1,10 @@
+cassio
+datasets
+langchain
+langchain-openai
+langchain_classic
+openai
+tiktoken
+langchain-community 
+cassandra-driver 
+PyPDF2
