@@ -3,9 +3,11 @@ datasets
 langchain
 langchain-openai
 langchain_classic
+langchain_core
 openai
 tiktoken
 langchain-community 
+langchain_text_splitters
 cassandra-driver 
 PyPDF2
 python-dotenv
